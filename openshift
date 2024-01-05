@@ -1,0 +1,653 @@
+apiVersion: v1
+items:
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+        -o openshift
+      kompose.version: 1.21.0 (992df58d8)
+    creationTimestamp: null
+    labels:
+      io.kompose.service: aspnetrunbasics
+    name: aspnetrunbasics
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        io.kompose.service: aspnetrunbasics
+    strategy: {}
+    template:
+      metadata:
+        annotations:
+          kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+            -o openshift
+          kompose.version: 1.21.0 (992df58d8)
+        creationTimestamp: null
+        labels:
+          io.kompose.service: aspnetrunbasics
+      spec:
+        containers:
+        - image: aspnetrunbasics
+          imagePullPolicy: ""
+          name: aspnetrunbasics
+          resources: {}
+        restartPolicy: Always
+        serviceAccountName: ""
+        volumes: null
+  status: {}
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+        -o openshift
+      kompose.version: 1.21.0 (992df58d8)
+    creationTimestamp: null
+    labels:
+      io.kompose.service: basket-api
+    name: basket-api
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        io.kompose.service: basket-api
+    strategy: {}
+    template:
+      metadata:
+        annotations:
+          kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+            -o openshift
+          kompose.version: 1.21.0 (992df58d8)
+        creationTimestamp: null
+        labels:
+          io.kompose.service: basket-api
+      spec:
+        containers:
+        - image: basketapi
+          imagePullPolicy: ""
+          name: basket-api
+          resources: {}
+        restartPolicy: Always
+        serviceAccountName: ""
+        volumes: null
+  status: {}
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+        -o openshift
+      kompose.version: 1.21.0 (992df58d8)
+    creationTimestamp: null
+    labels:
+      io.kompose.service: basketdb
+    name: basketdb
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        io.kompose.service: basketdb
+    strategy: {}
+    template:
+      metadata:
+        annotations:
+          kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+            -o openshift
+          kompose.version: 1.21.0 (992df58d8)
+        creationTimestamp: null
+        labels:
+          io.kompose.service: basketdb
+      spec:
+        containers:
+        - image: redis:alpine
+          imagePullPolicy: ""
+          name: basketdb
+          resources: {}
+        restartPolicy: Always
+        serviceAccountName: ""
+        volumes: null
+  status: {}
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+        -o openshift
+      kompose.version: 1.21.0 (992df58d8)
+    creationTimestamp: null
+    labels:
+      io.kompose.service: catalog-api
+    name: catalog-api
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        io.kompose.service: catalog-api
+    strategy: {}
+    template:
+      metadata:
+        annotations:
+          kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+            -o openshift
+          kompose.version: 1.21.0 (992df58d8)
+        creationTimestamp: null
+        labels:
+          io.kompose.service: catalog-api
+      spec:
+        containers:
+        - image: catalogapi
+          imagePullPolicy: ""
+          name: catalog-api
+          resources: {}
+        restartPolicy: Always
+        serviceAccountName: ""
+        volumes: null
+  status: {}
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+        -o openshift
+      kompose.version: 1.21.0 (992df58d8)
+    creationTimestamp: null
+    labels:
+      io.kompose.service: catalogdb
+    name: catalogdb
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        io.kompose.service: catalogdb
+    strategy: {}
+    template:
+      metadata:
+        annotations:
+          kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+            -o openshift
+          kompose.version: 1.21.0 (992df58d8)
+        creationTimestamp: null
+        labels:
+          io.kompose.service: catalogdb
+      spec:
+        containers:
+        - image: mongo
+          imagePullPolicy: ""
+          name: catalogdb
+          resources: {}
+        restartPolicy: Always
+        serviceAccountName: ""
+        volumes: null
+  status: {}
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+        -o openshift
+      kompose.version: 1.21.0 (992df58d8)
+    creationTimestamp: null
+    labels:
+      io.kompose.service: discount-api
+    name: discount-api
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        io.kompose.service: discount-api
+    strategy: {}
+    template:
+      metadata:
+        annotations:
+          kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+            -o openshift
+          kompose.version: 1.21.0 (992df58d8)
+        creationTimestamp: null
+        labels:
+          io.kompose.service: discount-api
+      spec:
+        containers:
+        - image: discountapi
+          imagePullPolicy: ""
+          name: discount-api
+          resources: {}
+        restartPolicy: Always
+        serviceAccountName: ""
+        volumes: null
+  status: {}
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+        -o openshift
+      kompose.version: 1.21.0 (992df58d8)
+    creationTimestamp: null
+    labels:
+      io.kompose.service: discount-grpc
+    name: discount-grpc
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        io.kompose.service: discount-grpc
+    strategy: {}
+    template:
+      metadata:
+        annotations:
+          kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+            -o openshift
+          kompose.version: 1.21.0 (992df58d8)
+        creationTimestamp: null
+        labels:
+          io.kompose.service: discount-grpc
+      spec:
+        containers:
+        - image: discountgrpc
+          imagePullPolicy: ""
+          name: discount-grpc
+          resources: {}
+        restartPolicy: Always
+        serviceAccountName: ""
+        volumes: null
+  status: {}
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+        -o openshift
+      kompose.version: 1.21.0 (992df58d8)
+    creationTimestamp: null
+    labels:
+      io.kompose.service: discountdb
+    name: discountdb
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        io.kompose.service: discountdb
+    strategy: {}
+    template:
+      metadata:
+        annotations:
+          kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+            -o openshift
+          kompose.version: 1.21.0 (992df58d8)
+        creationTimestamp: null
+        labels:
+          io.kompose.service: discountdb
+      spec:
+        containers:
+        - image: postgres
+          imagePullPolicy: ""
+          name: discountdb
+          resources: {}
+        restartPolicy: Always
+        serviceAccountName: ""
+        volumes: null
+  status: {}
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+        -o openshift
+      kompose.version: 1.21.0 (992df58d8)
+    creationTimestamp: null
+    labels:
+      io.kompose.service: elasticsearch
+    name: elasticsearch
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        io.kompose.service: elasticsearch
+    strategy: {}
+    template:
+      metadata:
+        annotations:
+          kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+            -o openshift
+          kompose.version: 1.21.0 (992df58d8)
+        creationTimestamp: null
+        labels:
+          io.kompose.service: elasticsearch
+      spec:
+        containers:
+        - image: docker.elastic.co/elasticsearch/elasticsearch:7.9.2
+          imagePullPolicy: ""
+          name: elasticsearch
+          resources: {}
+        restartPolicy: Always
+        serviceAccountName: ""
+        volumes: null
+  status: {}
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+        -o openshift
+      kompose.version: 1.21.0 (992df58d8)
+    creationTimestamp: null
+    labels:
+      io.kompose.service: kibana
+    name: kibana
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        io.kompose.service: kibana
+    strategy: {}
+    template:
+      metadata:
+        annotations:
+          kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+            -o openshift
+          kompose.version: 1.21.0 (992df58d8)
+        creationTimestamp: null
+        labels:
+          io.kompose.service: kibana
+      spec:
+        containers:
+        - image: docker.elastic.co/kibana/kibana:7.9.2
+          imagePullPolicy: ""
+          name: kibana
+          resources: {}
+        restartPolicy: Always
+        serviceAccountName: ""
+        volumes: null
+  status: {}
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+        -o openshift
+      kompose.version: 1.21.0 (992df58d8)
+    creationTimestamp: null
+    labels:
+      io.kompose.service: ocelotapigw
+    name: ocelotapigw
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        io.kompose.service: ocelotapigw
+    strategy: {}
+    template:
+      metadata:
+        annotations:
+          kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+            -o openshift
+          kompose.version: 1.21.0 (992df58d8)
+        creationTimestamp: null
+        labels:
+          io.kompose.service: ocelotapigw
+      spec:
+        containers:
+        - image: ocelotapigw
+          imagePullPolicy: ""
+          name: ocelotapigw
+          resources: {}
+        restartPolicy: Always
+        serviceAccountName: ""
+        volumes: null
+  status: {}
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+        -o openshift
+      kompose.version: 1.21.0 (992df58d8)
+    creationTimestamp: null
+    labels:
+      io.kompose.service: orderdb
+    name: orderdb
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        io.kompose.service: orderdb
+    strategy: {}
+    template:
+      metadata:
+        annotations:
+          kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+            -o openshift
+          kompose.version: 1.21.0 (992df58d8)
+        creationTimestamp: null
+        labels:
+          io.kompose.service: orderdb
+      spec:
+        containers:
+        - image: mcr.microsoft.com/mssql/server:2017-latest
+          imagePullPolicy: ""
+          name: orderdb
+          resources: {}
+        restartPolicy: Always
+        serviceAccountName: ""
+        volumes: null
+  status: {}
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+        -o openshift
+      kompose.version: 1.21.0 (992df58d8)
+    creationTimestamp: null
+    labels:
+      io.kompose.service: ordering-api
+    name: ordering-api
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        io.kompose.service: ordering-api
+    strategy: {}
+    template:
+      metadata:
+        annotations:
+          kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+            -o openshift
+          kompose.version: 1.21.0 (992df58d8)
+        creationTimestamp: null
+        labels:
+          io.kompose.service: ordering-api
+      spec:
+        containers:
+        - image: orderingapi
+          imagePullPolicy: ""
+          name: ordering-api
+          resources: {}
+        restartPolicy: Always
+        serviceAccountName: ""
+        volumes: null
+  status: {}
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+        -o openshift
+      kompose.version: 1.21.0 (992df58d8)
+    creationTimestamp: null
+    labels:
+      io.kompose.service: pgadmin
+    name: pgadmin
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        io.kompose.service: pgadmin
+    strategy: {}
+    template:
+      metadata:
+        annotations:
+          kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+            -o openshift
+          kompose.version: 1.21.0 (992df58d8)
+        creationTimestamp: null
+        labels:
+          io.kompose.service: pgadmin
+      spec:
+        containers:
+        - image: dpage/pgadmin4
+          imagePullPolicy: ""
+          name: pgadmin
+          resources: {}
+        restartPolicy: Always
+        serviceAccountName: ""
+        volumes: null
+  status: {}
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+        -o openshift
+      kompose.version: 1.21.0 (992df58d8)
+    creationTimestamp: null
+    labels:
+      io.kompose.service: portainer
+    name: portainer
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        io.kompose.service: portainer
+    strategy: {}
+    template:
+      metadata:
+        annotations:
+          kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+            -o openshift
+          kompose.version: 1.21.0 (992df58d8)
+        creationTimestamp: null
+        labels:
+          io.kompose.service: portainer
+      spec:
+        containers:
+        - image: portainer/portainer-ce
+          imagePullPolicy: ""
+          name: portainer
+          resources: {}
+        restartPolicy: Always
+        serviceAccountName: ""
+        volumes: null
+  status: {}
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+        -o openshift
+      kompose.version: 1.21.0 (992df58d8)
+    creationTimestamp: null
+    labels:
+      io.kompose.service: rabbitmq
+    name: rabbitmq
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        io.kompose.service: rabbitmq
+    strategy: {}
+    template:
+      metadata:
+        annotations:
+          kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+            -o openshift
+          kompose.version: 1.21.0 (992df58d8)
+        creationTimestamp: null
+        labels:
+          io.kompose.service: rabbitmq
+      spec:
+        containers:
+        - image: rabbitmq:3-management-alpine
+          imagePullPolicy: ""
+          name: rabbitmq
+          resources: {}
+        restartPolicy: Always
+        serviceAccountName: ""
+        volumes: null
+  status: {}
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+        -o openshift
+      kompose.version: 1.21.0 (992df58d8)
+    creationTimestamp: null
+    labels:
+      io.kompose.service: shopping-aggregator
+    name: shopping-aggregator
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        io.kompose.service: shopping-aggregator
+    strategy: {}
+    template:
+      metadata:
+        annotations:
+          kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+            -o openshift
+          kompose.version: 1.21.0 (992df58d8)
+        creationTimestamp: null
+        labels:
+          io.kompose.service: shopping-aggregator
+      spec:
+        containers:
+        - image: shoppingaggregator
+          imagePullPolicy: ""
+          name: shopping-aggregator
+          resources: {}
+        restartPolicy: Always
+        serviceAccountName: ""
+        volumes: null
+  status: {}
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+        -o openshift
+      kompose.version: 1.21.0 (992df58d8)
+    creationTimestamp: null
+    labels:
+      io.kompose.service: webstatus
+    name: webstatus
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        io.kompose.service: webstatus
+    strategy: {}
+    template:
+      metadata:
+        annotations:
+          kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert -f docker-compose.yml
+            -o openshift
+          kompose.version: 1.21.0 (992df58d8)
+        creationTimestamp: null
+        labels:
+          io.kompose.service: webstatus
+      spec:
+        containers:
+        - image: webstatus
+          imagePullPolicy: ""
+          name: webstatus
+          resources: {}
+        restartPolicy: Always
+        serviceAccountName: ""
+        volumes: null
+  status: {}
+kind: List
+metadata: {}
+
